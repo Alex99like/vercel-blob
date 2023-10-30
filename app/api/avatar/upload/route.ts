@@ -17,7 +17,7 @@ export async function POST(request: Request): Promise<NextResponse> {
 
   const file = await getImageAsBase64(url)
 
-  const blob = await put('base_file', file, {
+  const blob = await put(filename, file, {
     access: 'public',
   });
 
